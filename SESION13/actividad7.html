@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encuesta de Redes Sociales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      padding: 2rem;
+    }
+    .resultado {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    }
+    .resultado h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .resultado p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resultado" id="resultado"></div>
+
+<script>
+  const votos = {
+    instagram: 0,
+    tiktok: 0,
+    youtube: 0
+  };
+
+  const cantidad = 3;
+
+  for (let i = 0; i < cantidad; i++) {
+    const respuesta = prompt("¿Cuál es tu red favorita?\n1 = Instagram\n2 = TikTok\n3 = YouTube");
+    if (respuesta === "1") votos.instagram++;
+    else if (respuesta === "2") votos.tiktok++;
+    else if (respuesta === "3") votos.youtube++;
+  }
+
+  const total = votos.instagram + votos.tiktok + votos.youtube;
+
+  const porcentaje = (v) => ((v / total) * 100).toFixed(1);
+
+  const ganador =
+    votos.instagram >= votos.tiktok && votos.instagram >= votos.youtube ? "Instagram" :
+    votos.tiktok >= votos.youtube ? "TikTok" : "YouTube";
+
+  document.getElementById("resultado").innerHTML = `
+    <h2>Resultados de la Encuesta</h2>
+    <p>Instagram: ${porcentaje(votos.instagram)}%</p>
+    <p>TikTok: ${porcentaje(votos.tiktok)}%</p>
+    <p>YouTube: ${porcentaje(votos.youtube)}%</p>
+    <hr>
+    <p><strong>Red ganadora:</strong> ${ganador}</p>
+  `;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarjeta de Presentación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      padding: 2rem;
+    }
+    .tarjeta {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+      max-width: 400px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tarjeta" id="contenido">
+  <!-- Aquí se insertará la tarjeta -->
+</div>
+
+<script>
+  let nombre = prompt("Ingresa tu nombre completo");
+  let profesion = prompt("¿Cuál es tu profesión?");
+  let correo = prompt("Correo electrónico");
+
+  let tarjeta = {
+    nombre: nombre,
+    profesion: profesion,
+    correo: correo
+  };
+
+  function generarHTML(usuario) {
+    return `
+      <h2>Tarjeta de Presentación</h2>
+      <p><strong>Nombre:</strong> ${usuario.nombre}</p>
+      <p><strong>Profesión:</strong> ${usuario.profesion}</p>
+      <p><strong>Correo:</strong> ${usuario.correo}</p>
+    `;
+  }
+
+  document.getElementById("contenido").innerHTML = generarHTML(tarjeta);
+</script>
+
+</body>
+</html>

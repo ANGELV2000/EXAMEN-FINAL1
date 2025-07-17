@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 4 - Lista de frutas</title>
+</head>
+<body>
+  <script>
+    let frutas = ["Manzana", "Banana", "Pera", "Uva"];
+
+    frutas.forEach((fruta, index) => {
+      console.log(`Fruta ${index + 1}: ${fruta}`);
+    });
+
+    // Extensión: añadir nueva fruta con prompt
+    let nueva = prompt("Ingresa otra fruta para añadir:");
+    if (nueva) {
+      frutas.push(nueva);
+      console.log("Frutas actualizadas:");
+      frutas.forEach((fruta, index) => {
+        console.log(`Fruta ${index + 1}: ${fruta}`);
+      });
+    }
+  </script>
+</body>
+</html>

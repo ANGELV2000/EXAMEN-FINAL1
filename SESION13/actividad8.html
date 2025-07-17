@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Actividad 8 - Calculadora</title>
+</head>
+<body>
+  <script>
+    function calcular(a, b, operacion) {
+      if (operacion === "+") return a + b;
+      else if (operacion === "-") return a - b;
+      else if (operacion === "*") return a * b;
+      else if (operacion === "/") return b !== 0 ? a / b : "No se puede dividir entre cero";
+      else return "Operación no válida";
+    }
+
+    let num1 = parseFloat(prompt("Primer número:"));
+    let num2 = parseFloat(prompt("Segundo número:"));
+    let op = prompt("Operación (+, -, *, /):");
+    alert(`Resultado: ${calcular(num1, num2, op)}`);
+  </script>
+</body>
+</html>

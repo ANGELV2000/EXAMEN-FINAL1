@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adivina el Número</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f9ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .resultado {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resultado" id="mensaje"></div>
+
+<script>
+  const secreto = Math.floor(Math.random() * 10) + 1;
+  let intento;
+  let intentos = 0;
+
+  while (intento !== secreto) {
+    intento = parseInt(prompt("Adivina un número del 1 al 10"));
+    intentos++;
+    if (intento === secreto) {
+      break;
+    } else {
+      alert("Incorrecto, intenta de nuevo.");
+    }
+  }
+
+  document.getElementById("mensaje").innerHTML = `
+    <h2>¡Adivinaste correctamente!</h2>
+    <p>El número era <strong>${secreto}</strong>.</p>
+    <p>Intentos realizados: <strong>${intentos}</strong></p>
+  `;
+</script>
+
+</body>
+</html>
