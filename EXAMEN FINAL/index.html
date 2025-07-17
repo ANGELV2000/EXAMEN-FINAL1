@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Tiendita de Crochet</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>La Tiendita de Crochet</h1>
+      <p>Hecho con amor en cada puntada 🧶</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="historia">
+      <div class="recuadro">
+        <h2>¿Qué es el crochet?</h2>
+        <p>El crochet es una técnica artesanal que usa hilo y una aguja para crear prendas, accesorios y decoraciones. Su encanto radica en los detalles y el amor con que se hace cada pieza.</p>
+      </div>
+      <div class="recuadro">
+        <h2>Nuestra historia</h2>
+        <p>Esta tienda nació de tardes entre lanas y colores. Aquí encontrarás piezas únicas, elaboradas 100% a mano por una amante del crochet peruano 🇵🇪.</p>
+      </div>
+    </section>
+
+    <section class="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="galeria">
+        <div class="producto">
+          <img src="Crochet FLOWER KEYCHAIN🩷✨.jpg" alt="Llavero de flores">
+          <h3>Llavero de flores</h3>
+          <p>S/ 35.00</p>
+          <button class="agregar-carrito" data-producto="Llavero de flores" data-precio="35">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="descarga (10).jpg" alt="Portavasos tejido">
+          <h3>Portavasos tejido</h3>
+          <p>S/ 28.00</p>
+          <button class="agregar-carrito" data-producto="Portavasos tejido" data-precio="28">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="descarga (8).jpg" alt="Mini amigurumi">
+          <h3>Mini amigurumi</h3>
+          <p>S/ 12.00</p>
+          <button class="agregar-carrito" data-producto="Mini amigurumi" data-precio="12">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="carrito" class="carrito-modal oculto">
+    <div class="carrito-header">
+      <span>🛒 Carrito</span>
+      <button id="cerrarCarrito">✖</button>
+    </div>
+    <div class="carrito-items"></div>
+    <p>Total: S/. <span id="total">0.00</span></p>
+    <button id="vaciar-carrito" class="btn">Vaciar carrito</button>
+    <button id="comprar-carrito" class="btn comprar">Comprar</button>
+  </div>
+</aside>
+
+  <button id="abrirCarrito" class="btn">🛍 Ver Carrito</button>
+
+  <a href="https://wa.me/51999999999" class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">💬</a>
+
+  <footer>
+    <p>&copy; 2025 La Tiendita de Crochet. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
