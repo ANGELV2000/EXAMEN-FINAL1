@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background-color: #fff8f0;
+  color: #333;
+}
+
+header {
+  background-image: url('descarga\ \(15\).jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px #00000066;
+}
+
+.descripcion {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.historia {
+  background: #ffe8f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.historia h2 {
+  margin-bottom: 1rem;
+}
+
+main.productos {
+  padding: 2rem;
+  background-image: url('Acuarela\ de\ patrones\ sin\ fisuras\ con\ pincel\ de\ tiras\ horizontales\ rosas\ Fondo\ de\ pintura\ de\ dibujo\ a\ mano\ _\ Vector\ Premium.jpg');
+  background-size: cover;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 10px #ddd;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.agregar-carrito {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #ffabc1;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.carrito {
+  background-color: #fff0f5;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px #fbb;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.contacto {
+  padding: 2rem;
+  background-color: #ffeef7;
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 0.5rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+form button {
+  background-color: #f77ca3;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffd7e6;
+  color: #444;
+  margin-top: 2rem;
+}
+
+/* WhatsApp botón flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: #25d366;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 2px 2px 8px #888;
+  z-index: 1000;
+}
+
+/* Estilo desigual para productos handmade */
+.producto.desigual:nth-child(1) {
+  transform: rotate(-1deg) translateY(5px);
+}
+.producto.desigual:nth-child(2) {
+  transform: rotate(1.5deg) translateY(-8px);
+}
+.producto.desigual:nth-child(3) {
+  transform: rotate(-2deg) translateY(3px);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  main.productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 90%;
+  }
+}
